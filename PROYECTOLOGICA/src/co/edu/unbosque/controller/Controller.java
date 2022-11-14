@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 import co.edu.unbosque.view.Gui;
 
-	public class Controller implements ActionListener{
+public class Controller implements ActionListener {
 	private Gui g;
 
 	public Controller() {
@@ -19,6 +19,46 @@ import co.edu.unbosque.view.Gui;
 			g.getVc().setVisible(true);
 			g.getVi().dispose();
 		}
-		
+		if (e.getActionCommand().equals(g.getVc().SIGUIENTE)) {
+//			g.getVc().setVisible(true);
+			g.getVc().dispose();
+		}
+
+	}
+
+	public void realizarDiagnostico() {
+		int edad = Integer.parseInt(g.getVc().getPc().getEdadTexto().getText());
+		String nombre = g.getVc().getPc().getNombreTexto().getText();
+		String sexo = g.getVc().getPc().getLista().getActionCommand();
+		String genetica = "";
+		String fuma = "";
+		String alcohol = "";
+		int cont = 0;
+
+		if (nombre.equals(null) || edad == 0 | sexo.equals(null)) {
+			System.out.println("Los campos son obligatorios");
+		}
+
+		if (14 < edad && edad < 26) {
+			cont += 0.1;
+			System.out.println("18");
+		} else if (27 < edad && edad < 59) {
+			cont += 0.3;
+		} else if (60 < edad) {
+			cont += 0.6;
+		}
+
+		if (sexo.equals("Femenino")) {
+			cont += 0.7;
+			System.out.println("fem");
+		} else if (sexo.equals("Masculino")) {
+			cont += 0.3;
+		}
+
+		if (genetica.equals("si")) {
+			cont += 0.75;
+		} else if (genetica.equals("no")) {
+			cont += 0.25;
+		}
 	}
 }
