@@ -38,4 +38,30 @@ public class VentanaCuestionario extends JFrame{
 		add(this.pc, BorderLayout.CENTER);
 	}
 
+	public JLabel getTexto() {
+		return texto;
+	}
+
+	public void setTexto(JLabel texto) {
+		this.texto = texto;
+	}
+
+	public JButton getSiguiente() {
+		return siguiente;
+	}
+
+	public void setSiguiente(JButton siguiente) {
+		this.siguiente = siguiente;
+	}
+
+	public PanelCuestionario getPc() {
+		return pc;
+	}
+
+	public void setPc(PanelCuestionario pc) {
+		this.pc = pc;
+	}
+	
+	
+
 }
