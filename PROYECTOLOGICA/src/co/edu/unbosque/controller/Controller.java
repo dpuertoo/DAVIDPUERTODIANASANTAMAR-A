@@ -18,6 +18,9 @@ public class Controller implements ActionListener {
 		if (e.getActionCommand().equals(g.getVi().CONTINUAR)) {
 			g.getVc().setVisible(true);
 			g.getVi().dispose();
+		}if (e.getActionCommand().equals(g.getVc().SIGUIENTE)) {
+			g.getVopc().setVisible(true);
+			g.getVc().dispose();
 		}
 		if (e.getActionCommand().equals(g.getVc().SIGUIENTE)) {
 //			g.getVc().setVisible(true);

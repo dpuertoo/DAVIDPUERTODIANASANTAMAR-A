@@ -66,5 +66,4 @@ public class VentanaCuestionario extends JFrame {
 	public static String getSIGUIENTE() {
 		return SIGUIENTE;
 	}
-
 }
