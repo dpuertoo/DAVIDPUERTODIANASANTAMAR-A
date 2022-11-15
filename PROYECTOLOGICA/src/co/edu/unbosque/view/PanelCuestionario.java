@@ -44,7 +44,7 @@ public class PanelCuestionario extends JPanel{
 		this.lista = new JComboBox();
 		this.lista.addItem("Masculino");
 		this.lista.addItem("Femenino");
-		this.lista.setBackground(Color.GRAY);
+//		this.lista.setBackground(Color.GRAY);
 		this.lista.setBounds(170, 175, 150, 30);
 
 		add(this.nombre);

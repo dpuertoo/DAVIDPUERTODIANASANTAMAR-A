@@ -6,6 +6,7 @@ public class Gui {
 	private VentanaInicio vi;
 	private VentanaCuestionario vc;
 	private VentanaOpcionMultiple vopc;
+	private VentanaResultados vr;
 	
 	public Gui(Controller c) {
 		this.vi = new VentanaInicio();
@@ -16,6 +17,9 @@ public class Gui {
 		
 		this.vopc = new VentanaOpcionMultiple();
 		this.vopc.getCont().addActionListener(c);
+		
+		this.vr = new VentanaResultados(vc.getPc().getNombreTexto().getText(), 0);
+		this.vr.getFin().addActionListener(c);
 	}
 
 	public VentanaInicio getVi() {
@@ -41,6 +45,16 @@ public class Gui {
 	public void setVopc(VentanaOpcionMultiple vopc) {
 		this.vopc = vopc;
 	}
+
+	public VentanaResultados getVr() {
+		return vr;
+	}
+
+	public void setVr(VentanaResultados vr) {
+		this.vr = vr;
+	}
+	
+	
 	
 	
 	
